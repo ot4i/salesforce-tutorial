@@ -32,7 +32,7 @@
 	{
         "_common": 
 		{
-            "name": "Retrieving records from a Salesforce system",
+            "name": "Using a SalesforceRequest node to retrieve records from Salesforce.com",
             "shortDescription": "Learn how to use the SalesforceRequest node to retrieve records from Salesforce.com.",
             "durationText": "This tutorial takes approximately",
             "durationTime": "15 minutes",
@@ -61,11 +61,11 @@
                 }
             ],
             "outcomesName": "Learning outcomes",
-            "_outcomesComment": "An understanding of how IBM Integration Bus can be used to ...",
+            "_outcomesComment": "An understanding of how IBM App Connect Enterprise can be used to ...",
             "outcomeList": 
 			[
                 {
-                    "title": "An understanding of how IBM Integration Bus can be used to access records in Salesforce systems."
+                    "title": "An understanding of how IBM App Connect Enterprise can be used to access records in Salesforce systems."
                 }
             ],
             "summary": 
@@ -78,7 +78,7 @@
                         "section": "This tutorial demonstrates a simple message flow which retrieves existing Account records from a Salesforce system using the SalesforceRequest node. The flow exposes a HTTP service which accepts some filter properties to limit the number of Account records returned. The records are returned as an array of JSON objects."
                     },
                     {
-                        "section": "The SalesforceRequest node in IBM Integration Bus allows message flows to be developed that can Create, Retrieve, Update and Delete records for the different objects that exist in a Salesforce system, such as Account, Contact and Lead. Records may be retrieved by Salesforce ID, by custom external ID, or by SOQL WHERE clause. Records may be updated by Salesforce ID or by custom external ID. Records may be deleted by Salesforce ID."
+                        "section": "The SalesforceRequest node in IBM App Connect Enterprise allows message flows to be developed that can Create, Retrieve, Update and Delete records for the different objects that exist in a Salesforce system, such as Account, Contact and Lead. Records may be retrieved by Salesforce ID, by custom external ID, or by SOQL WHERE clause. Records may be updated by Salesforce ID or by custom external ID. Records may be deleted by Salesforce ID."
                     },
                     {
                         "section": "The SalesforceRequest node uses the Force.com REST API to exchange data with Salesforce, and so the input and output message trees for the SalesforceRequest node are in the JSON domain."
@@ -87,10 +87,7 @@
                         "section": "Each Salesforce object is described by a JSON schema, which may be used as the input or output schema for a Mapping node. The JSON schema for Salesforce objects are provided in the server/sample/Salesforce folder of your IBM Integration Bus installation, and must be copied into a shared library or REST API project. The map using the JSON schema must reside in the same container as the schema."
                     },
                     {
-                        "section": "You will import an application and a shared library into your Integration Toolkit workspace, configure the connection to the Salesforce system, and invoke the message flow using the Flow Exerciser."
-                    },
-                    {
-                        "section": "NOTE: The SalesforceRequest node is available in developer mode and applicationIntegrationSuite mode only. If you are not using IBM Integration Bus for Developers, you must use mqsimode to modify your integration node to run in applicationIntegrationSuite mode before you start the tutorial. You must obtain an IBM Application Integration Suite license to use the SaleforceRequest node in production."
+                        "section": "You will import an application and a shared library into your Toolkit workspace, configure the connection to the Salesforce system, and invoke the message flow using the Flow Exerciser."
                     }
                 ]
             },
@@ -171,10 +168,7 @@
                             "section": "Change the <span class='property'>Salesforce URL</span> property to the URL of a Salesforce system to which you have access. "
                         },
                         {
-                            "section": "In order for the SalesforceRequest node to communicate with Salesforce, a Connected App must be created in the Salesforce system and a Security Identity must be created in IBM Integration Bus using <span class='cmdname'>mqsisetdbparms</span>. Follow the <span class='uicontrol'>Configuring a secure connection to Salesforce.com</span> link in the <span class='uicontrol'>Find out more</span> section to perform these tasks. The Security Identity should be called <span class='resource'>sf1</span> to match the <span class='icon'>Salesforce Request</span> node property, or you can create one with your own name and update the node property." 
-                        },
-                        {
-                            "section": "If you are not using Developer edition, from an IBM Integration console run <span class='cmdname'>mqsimode &lt;integration_node&gt; -o applicationIntegrationSuite</span>."
+                            "section": "In order for the SalesforceRequest node to communicate with Salesforce, a Connected App must be created in the Salesforce system and a Security Identity must be created in IBM App Connect Enterprise using <span class='cmdname'>mqsisetdbparms</span>. Follow the <span class='uicontrol'>Configuring a secure connection to Salesforce.com</span> link in the <span class='uicontrol'>Find out more</span> section to perform these tasks. The Security Identity should be called <span class='resource'>sf1</span> to match the <span class='icon'>Salesforce Request</span> node property, or you can create one with your own name and update the node property.<br>If you are using a standalone integration server (where C:\\MyServer is the server's work directory) then the command will look similar to this:<br/><code><span class='cmdname'>mqsisetdbparms</span> -w C:\\MyServer -n salesforce::sf1 -u myUserID -p myPassword -c myClientIdentity -s myClientSecret</code><br/>If you are using a node-owned integration server (where TESTNODE is the name of the integration node) then the command will look similar to this:<br><code><span class='cmdname'>mqsisetdbparms</span> TESTNODE -n salesforce::sf1 -u myUserID -p myPassword -c myClientIdentity -s myClientSecret</code>"
                         },
                         {
                             "section": "Next you will use the Flow exerciser to send HTTP requests to the message flow."
@@ -200,17 +194,6 @@
                             "title": "Knowledge Center link to ",
                             "description": "Creating or transforming a JSON output message by using a JSON schema",
                             "link": "com.ibm.etools.mft.doc/sm12036_.htm"
-                        }
-                    ]
-                },
-                "actions-removed": 
-				{
-                    "title": "Prepare Actions",
-                    "details": 
-					[
-                        {
-                            "name": "Deploy",
-                            "method": "deployArtifacts()"
                         }
                     ]
                 }
@@ -297,19 +280,7 @@
 			    "link": "com.ibm.etools.mft.doc/bz90600_.htm"
                         }
                     ]
-                },
-		"exits": 
-		{
-			"title": "Run Exits",
-			"details": 
-			[
-				{
-					"name": "Clean Up",
-					"description": "Clean up and remove any changes in your workspace made by the tutorial.",
-					"method": "cleanUp()"
-				}
-			]
-		}
+                }
             }
         }
     }
