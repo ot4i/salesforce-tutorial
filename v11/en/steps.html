@@ -15,14 +15,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<meta name="copyright" content="Copyright IBM Corporation 2014" />
-		<meta name="abstract" content="IBM Integration Bus V10 Tutorial">
+		<meta name="abstract" content="IBM App Connect Enterprise V11 Tutorial">
 		<meta name="author" content="IBM">
-		<meta name="description" content="IBM Integration Bus V10 Tutorial">
+		<meta name="description" content="IBM App Connect Enterprise V11 Tutorial">
 		<meta name="keywords" content="keywords" > 
 		<meta name="robots" content="index,follow">
-		<meta name="source" content="IBM Integration Bus V10 Tutorial" /> 
+		<meta name="source" content="IBM App Connect Enterprise V11 Tutorial" /> 
 		
-		<title>IBM Integration Bus V10 Tutorial</title>
+		<title>IBM App Connect Enterprise V11 Tutorial</title>
 
     	<link rel="stylesheet" href="https://ot4i.github.io/iib-tutorials/css/main.css" />
 		<link rel="stylesheet" href="https://ot4i.github.io/iib-tutorials/css/app.css" />
@@ -43,7 +43,7 @@
 	</div>
 	<div class="row">
 	  <div class="small-9 medium-9 large-9 columns">
-	    <h4 class="title">Retrieving records from a Salesforce system <action><button class="small radius button" tabindex="0" id="stepsViewDetails" onclick="viewDetails()"> View Details</button> </action></h4>
+	    <h4 class="title">Using a SalesforceRequest node to retrieve records from Salesforce.com <action><button class="small radius button" tabindex="0" id="stepsViewDetails" onclick="viewDetails()"> View Details</button> </action></h4>
 	  </div>
 	  <div class="small-3 medium-3 large-3 columns">
 		<a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm')" class="small right helplink">IBM Knowledge Center</a> 
@@ -129,10 +129,7 @@
 								<p> Change the <span class="property">Salesforce URL</span> property to the URL of a Salesforce system to which you have access.  </p>
 								
 							
-								<p> In order for the SalesforceRequest node to communicate with Salesforce, a Connected App must be created in the Salesforce system and a Security Identity must be created in IBM Integration Bus using <span class="cmdname">mqsisetdbparms</span>. Follow the <span class="uicontrol">Configuring a secure connection to Salesforce.com</span> link in the <span class="uicontrol">Find out more</span> section to perform these tasks. The Security Identity should be called <span class="resource">sf1</span> to match the <span class="icon">Salesforce Request</span> node property, or you can create one with your own name and update the node property. </p>
-								
-							
-								<p> If you are not using Developer edition, from an IBM Integration console run <span class="cmdname">mqsimode &lt;integration_node&gt; -o applicationIntegrationSuite</span>. </p>
+								<p> In order for the SalesforceRequest node to communicate with Salesforce, a Connected App must be created in the Salesforce system and a Security Identity must be created in IBM App Connect Enterprise using <span class="cmdname">mqsisetdbparms</span>. Follow the <span class="uicontrol">Configuring a secure connection to Salesforce.com</span> link in the <span class="uicontrol">Find out more</span> section to perform these tasks. The Security Identity should be called <span class="resource">sf1</span> to match the <span class="icon">Salesforce Request</span> node property, or you can create one with your own name and update the node property.<br>If you are using a standalone integration server (where C:\MyServer is the server's work directory) then the command will look similar to this:<br><code><span class="cmdname">mqsisetdbparms</span> -w C:\MyServer -n salesforce::sf1 -u myUserID -p myPassword -c myClientIdentity -s myClientSecret</code><br>If you are using a node-owned integration server (where TESTNODE is the name of the integration node) then the command will look similar to this:<br><code><span class="cmdname">mqsisetdbparms</span> TESTNODE -n salesforce::sf1 -u myUserID -p myPassword -c myClientIdentity -s myClientSecret</code> </p>
 								
 							
 								<p> Next you will use the Flow exerciser to send HTTP requests to the message flow. </p>
@@ -167,7 +164,7 @@
 		    	</div>
 		    	<div class="content" id="panel41">
 		    		
-		    		<div class="small-10 medium-10 large-10 columns divider">
+					<div class="small-12 medium-12 large-12 columns">
 					
 				    	<div class="row content-details">
 					      	<h4>Follow these steps to complete the tutorial</h4>
@@ -180,11 +177,11 @@
 									<ol>
 									
 									
-										<li> Click the Flow Exerciser icon <img src="https://ot4i.github.io/ot4i.tutorials//dist/images/icons/iib/startFlowExerciser.png" alt> to deploy the projects and to start recording the message path through the flow.
+										<li> Click the Flow Exerciser icon <img src="http://ot4i.github.io/ot4i.tutorials//dist/images/icons/iib/startFlowExerciser.png" alt> to deploy the projects and to start recording the message path through the flow.
 										
 										</li>
 									
-										<li> Click the Send Message icon <img src="https://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/sendMessage.png" alt> to select a message to send to the flow.
+										<li> Click the Send Message icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/sendMessage.png" alt> to select a message to send to the flow.
 										
 										</li>
 									
@@ -260,17 +257,6 @@
 						</div>
 							
 					</div>
-					
-					<div class="small-2 medium-2 large-2 columns">
-					
-					
-					
-					
-					
-					<h4 class="tkaction"><a href="javascript:;" onclick="cleanUp()" title="Clean up and remove any changes in your workspace made by the tutorial."> Clean Up <img class="icon-image" src="https://ot4i.github.io/iib-tutorials/images/icons/ibmdesign/close-cancel-error_128-red.png"></a></h4>
-				    
-					
-				    </div>
 					
 				</div>	
 			</div> <!-- tab-content -->
