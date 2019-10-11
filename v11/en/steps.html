@@ -132,6 +132,9 @@
 								<p> In order for the SalesforceRequest node to communicate with Salesforce, a Connected App must be created in the Salesforce system and a Security Identity must be created in IBM App Connect Enterprise using <span class="cmdname">mqsisetdbparms</span>. Follow the <span class="uicontrol">Configuring a secure connection to Salesforce.com</span> link in the <span class="uicontrol">Find out more</span> section to perform these tasks. The Security Identity should be called <span class="resource">sf1</span> to match the <span class="icon">Salesforce Request</span> node property, or you can create one with your own name and update the node property.<br>If you are using a standalone integration server (where C:\MyServer is the server's work directory) then the command will look similar to this:<br><code><span class="cmdname">mqsisetdbparms</span> -w C:\MyServer -n salesforce::sf1 -u myUserID -p myPassword -c myClientIdentity -s myClientSecret</code><br>If you are using a node-owned integration server (where TESTNODE is the name of the integration node) then the command will look similar to this:<br><code><span class="cmdname">mqsisetdbparms</span> TESTNODE -n salesforce::sf1 -u myUserID -p myPassword -c myClientIdentity -s myClientSecret</code> </p>
 								
 							
+								<p> Restart your integration node (or server) for the mqsisetdbparms command to take effect. </p>
+								
+							
 								<p> Next you will use the Flow exerciser to send HTTP requests to the message flow. </p>
 								
 							
@@ -170,14 +173,18 @@
 					      	<h4>Follow these steps to complete the tutorial</h4>
 					        
 						    
-								<p> The <span class="msgflow">Salesforce_Retrieve</span> message flow should be open already: </p>
+								<p> Having set-up the required security identity, we will now deploy and test the scenario: </p>
 								
 								
 									
 									<ol>
 									
 									
-										<li> Click the Flow Exerciser icon <img src="http://ot4i.github.io/ot4i.tutorials//dist/images/icons/iib/startFlowExerciser.png" alt> to deploy the projects and to start recording the message path through the flow.
+										<li> Drag and drop deploy the shared libarary named <span class="application">Salesforce_Schemas</span> on to your integration server.
+										
+										</li>
+									
+										<li> Open the <span class="msgflow">Salesforce_Retrieve</span> message flow and click the Flow Exerciser icon <img src="http://ot4i.github.io/ot4i.tutorials//dist/images/icons/iib/startFlowExerciser.png" alt> to deploy the flow and start recording.
 										
 										</li>
 									
