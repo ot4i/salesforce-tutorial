@@ -41,7 +41,7 @@
             "helpLink": 
 			{
                 "text": "IBM Knowledge Center",
-                "link": "/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm"
+           		"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.ace.home.doc/help_home.htm"
             }
         },
         "pageDetails": 
@@ -100,8 +100,8 @@
 					{
 						"title": "Knowledge Center link to ",
 						"description": "Working with Salesforce",
-						"link": "com.ibm.etools.mft.doc/bz90600_.htm",
-						"type": "help"
+						"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bz90600_.htm",
+						"type": "web"
 					}
 				]
 			}
@@ -129,11 +129,12 @@
 				{
                     "title": "Find out more",
                     "details": 
-		    [
+		    		[
                         {
                             "title": "Knowledge Center link to ",
-			    "description": "Working with Salesforce",
-			    "link": "com.ibm.etools.mft.doc/bz90600_.htm"
+			    			"description": "Working with Salesforce",
+			    			"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bz90600_.htm",
+							"type": "weB"
                         }
                     ]
                 },
@@ -186,17 +187,20 @@
                         {
                             "title": "Knowledge Center link to ",
                             "description": "Configuring a secure connection to Salesforce.com",
-                            "link": "com.ibm.etools.mft.doc/bz90640_.htm"
+                            "link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bz90640_.htm",
+							"type": "web"
                         },
                         {
                             "title": "Knowledge Center link to ",
-			    "description": "Working with Salesforce",
-			    "link": "com.ibm.etools.mft.doc/bz90600_.htm"
+						    "description": "Working with Salesforce",
+						    "link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bz90600_.htm",
+							"type": "web"
                         },
                         {
                             "title": "Knowledge Center link to ",
                             "description": "Creating or transforming a JSON output message by using a JSON schema",
-                            "link": "com.ibm.etools.mft.doc/sm12036_.htm"
+                            "link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/sm12036_.htm",
+							"type": "web"
                         }
                     ]
                 }
@@ -273,17 +277,20 @@
                         {
                             "title": "Knowledge Center link to ",
                             "description": "Testing your message flow by using the Flow exerciser",
-                            "link": "com.ibm.etools.mft.doc/rt26110_.htm"
+                            "link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/rt26110_.htm",
+							"type": "web"
                         },
                         {
                             "title": "Knowledge Center link to ",
                             "description": "Resolving problems when you use Salesforce nodes",
-                            "link": "com.ibm.etools.mft.doc/bz90710_.htm"
+                            "link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bz90710_.htm",
+							"type": "web"
                         },
                         {
                             "title": "Knowledge Center link to ",
-			    "description": "Working with Salesforce",
-			    "link": "com.ibm.etools.mft.doc/bz90600_.htm"
+			    			"description": "Working with Salesforce",
+			    			"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bz90600_.htm",
+							"type": "web"
                         }
                     ]
                 }
