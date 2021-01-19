@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+ 
+	
+<!-- header::Start -->
+	<head>
+		<!-- Use Internet Explorer 9 Standards mode for Eclipse Browser Control - https://www.eclipse.org/swt/faq.php#browsernativeie and https://msdn.microsoft.com/en-us/library/jj676915%28v=vs.85%29.aspx -->
+  		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		
+		<!-- Next 2 http=equiv headers required to disable caching the Eclipse Browser Widget -->
+		<meta http-equiv="Pragma" content="no-cache">
+  		<meta http-equiv="Expires" content="-1">
+
+		<meta charset="UTF-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta name="copyright" content="Copyright IBM Corporation 2014" />
+		<meta name="abstract" content="IBM App Connect Enterprise V11 Tutorial">
+		<meta name="author" content="IBM">
+		<meta name="description" content="IBM App Connect Enterprise V11 Tutorial">
+		<meta name="keywords" content="keywords" > 
+		<meta name="robots" content="index,follow">
+		<meta name="source" content="IBM App Connect Enterprise V11 Tutorial" /> 
+		
+		<title>IBM App Connect Enterprise V11 Tutorial</title>
+
+    	<link rel="stylesheet" href="https://ot4i.github.io/iib-tutorials/css/main.css" />
+		<link rel="stylesheet" href="https://ot4i.github.io/iib-tutorials/css/app.css" />
+    	
+		<script src="https://ot4i.github.io/iib-tutorials/js/json2.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/js2java.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/js2java_steps.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/vendor/modernizr.js"></script>
+	</head>
+<!-- header::End -->
+<!-- body::Start -->
+		<body>
+  	<!-- body content here -->
+	<div class="row">
+	  <div class="small-12 medium-12 large-12 columns">
+	    <p> </p>
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="small-9 medium-9 large-9 columns">
+	    <h4 class="title">Using a SalesforceRequest node to retrieve records from Salesforce.com <action><button class="small radius button" tabindex="0" id="stepsViewDetails" onclick="viewDetails()"> View Details</button> </action></h4>
+	  </div>
+	  <div class="small-3 medium-3 large-3 columns">
+		<a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.ace.home.doc/help_home.htm')" class="small right helplink">IBM Knowledge Center</a> 
+	  </div>
+	</div> 
+	<hr>
+	<div class="row">
+		<div class="small-10 medium-10 large-10 columns">
+		<h5> Learn how to use the SalesforceRequest node to retrieve records from Salesforce.com. </h5>
+		</div>
+		<div class="small-2 medium-2 large-2 columns">
+			<button class="small radius button right" tabindex="0" id="backToGallery" onclick="backToGallery()"> Back To Gallery
+			</button>
+		</div>
+	</div>
+	<div class="row">          
+		  <div class="small-12 medium-12 large-12 columns">
+			<ul class="tabs vertical"> 
+				<li class="tab-title tab-title-small active">
+				  <a href="javascript:;" onclick="show('panel21')">Create</a> 
+				</li>
+				<li class="tab-title tab-title-small">
+				  <a href="javascript:;" onclick="show('panel31')">Prepare</a> 
+				</li>
+				<li class="tab-title tab-title-small">
+				  <a href="javascript:;" onclick="show('panel41')">Run</a> 
+				</li>
+			</ul>
+			<!-- editing -->
+			<div class="tabs-content panel-thin-blue vertical"> 
+		    	<div class="content active" id="panel21">
+		    		
+		    		<div class="small-10 medium-10 large-10 columns divider">
+					
+				      	<div class="row content-details">
+					      	<h4>Import project</h4>
+					        
+						    
+								<p> Click <span class="uicontrol">Import</span> and the <span class="application">Salesforce_Retrieve</span> application and <span class="library">Salesforce_Schemas</span> shared library will be imported into your workspace. </p>
+								
+							
+								<p> The <span class="msgflow">Salesforce_Retrieve</span> message flow will be opened for you. </p>
+								
+							
+						</div>
+						
+						<div class="row content-details">
+							<h4>Find out more</h4>
+							<ul>
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bz90600_.htm')" title="Knowledge Center link to Working with Salesforce">Working with Salesforce</a> </li>
+							   	
+							
+							</ul>
+						</div>
+						
+					</div>
+					
+					<div class="small-2 medium-2 large-2 columns">
+					
+					
+					<h4 class="tkaction"><a href="javascript:;" onclick="importArtifacts(); openResource('MainFlow')"> Import <img class="icon-image" src="https://ot4i.github.io/iib-tutorials/images/icons/ibmdesign/back-right-previous_128-orange.png"></a></h4>
+										
+				    </div>
+					
+		    	</div>
+		    	<div class="content" id="panel31">
+					
+					<div class="small-12 medium-12 large-12 columns">
+					
+						<div class="row content-details">
+						  	<h4>Imported projects</h4>
+						    
+						    
+								<p> The <span class="application">Salesforce_Retrieve</span> application and <span class="library">Salesforce_Schemas</span> shared library are now shown in the Application Development view of your workspace. </p>
+								
+							
+								<p> Click on the <span class="icon">Salesforce Request</span> node in the message flow. In the Properties view, the <span class="property">Operation</span> is <span class="userinput">Retrieve</span> and the <span class="property">Salesforce object</span> is <span class="userinput">Account</span>. </p>
+								
+							
+								<p> Change the <span class="property">Salesforce URL</span> property to the URL of a Salesforce system to which you have access.  </p>
+								
+							
+								<p> In order for the SalesforceRequest node to communicate with Salesforce, a Connected App must be created in the Salesforce system and a Security Identity must be created in IBM App Connect Enterprise using <span class="cmdname">mqsisetdbparms</span>. Follow the <span class="uicontrol">Configuring a secure connection to Salesforce.com</span> link in the <span class="uicontrol">Find out more</span> section to perform these tasks. The Security Identity should be called <span class="resource">sf1</span> to match the <span class="icon">Salesforce Request</span> node property, or you can create one with your own name and update the node property.<br>If you are using a standalone integration server (where C:\MyServer is the server's work directory) then the command will look similar to this:<br><code><span class="cmdname">mqsisetdbparms</span> -w C:\MyServer -n salesforce::sf1 -u myUserID -p myPassword -c myClientIdentity -s myClientSecret</code><br>If you are using a node-owned integration server (where TESTNODE is the name of the integration node) then the command will look similar to this:<br><code><span class="cmdname">mqsisetdbparms</span> TESTNODE -n salesforce::sf1 -u myUserID -p myPassword -c myClientIdentity -s myClientSecret</code> </p>
+								
+							
+								<p> Restart your integration node (or server) for the mqsisetdbparms command to take effect. </p>
+								
+							
+								<p> Next you will use the Flow exerciser to send HTTP requests to the message flow. </p>
+								
+							
+						</div>
+						
+						<div class="row content-details">
+							<h4>Find out more</h4>
+							<ul>
+							
+								
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bz90640_.htm')" title="Knowledge Center link to  Configuring a secure connection to Salesforce.com">Configuring a secure connection to Salesforce.com</a> </li>
+									
+							
+								
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bz90600_.htm')" title="Knowledge Center link to  Working with Salesforce">Working with Salesforce</a> </li>
+									
+							
+								
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/sm12036_.htm')" title="Knowledge Center link to  Creating or transforming a JSON output message by using a JSON schema">Creating or transforming a JSON output message by using a JSON schema</a> </li>
+									
+							
+							</ul>
+						</div>
+							
+					</div>
+					
+		    	</div>
+		    	<div class="content" id="panel41">
+		    		
+					<div class="small-12 medium-12 large-12 columns">
+					
+				    	<div class="row content-details">
+					      	<h4>Follow these steps to complete the tutorial</h4>
+					        
+						    
+								<p> Having set-up the required security identity, we will now deploy and test the scenario: </p>
+								
+								
+									
+									<ol>
+									
+									
+										<li> Drag and drop deploy the shared libarary named <span class="application">Salesforce_Schemas</span> on to your integration server.
+										
+										</li>
+									
+										<li> Open the <span class="msgflow">Salesforce_Retrieve</span> message flow and click the Flow Exerciser icon <img src="http://ot4i.github.io/ot4i.tutorials//dist/images/icons/iib/startFlowExerciser.png" alt> to deploy the flow and start recording.
+										
+										</li>
+									
+										<li> Click the Send Message icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/sendMessage.png" alt> to select a message to send to the flow.
+										
+										</li>
+									
+										<li> Choose <span class="filepath">Input.json</span>. The JSON message data contains two filter parameters, <span class="parmname">Limit</span> and <span class="parmname">Skip</span>. These will be set in the LocalEnvironment section used for the SalesforceRequest node, and control the number of records that are returned. Change the values if you want more than 10 records, or if you want to skip records.
+										
+										</li>
+									
+										<li> Click Send. Your message is sent to the <span class="icon">HTTP Input</span> node.
+										
+										</li>
+									
+										<li> In the Progress Information dialog, click on <span class="property">Received HTTP reply message ...</span> to view the output message from the flow. The Account records have been returned as a JSON array.
+										
+										</li>
+									
+									
+									</ol>
+									
+								
+							
+								<p> After you close the dialog, the message path is automatically highlighted on the message flow. Click on any connection to see the data that passed through that connection. You can see that: </p>
+								
+								
+									
+									<ul>
+									
+									
+										<li> The <span class="icon">Prepare Filter Map</span> node set the <span class="parmname">Limit</span> and <span class="parmname">Skip</span> values in the LocalEnvironment section used for the SalesforceRequest node.
+										
+										</li>
+									
+										<li> The <span class="icon">Salesforce Request</span> node retrieved up to the number of Account records specified by <span class="parmname">Limit</span>  and <span class="parmname">Skip</span>, and propagated them as a JSON array.
+										
+										</li>
+									
+										<li> The <span class="icon">Select Fields Map</span> node removed unwanted fields from each record in the array, using a map built from the JSON schema for the Account object.
+										
+										</li>
+									
+									
+									</ul>
+									
+								
+							
+								<p> Repeat the steps above, but this time choose message <span class="filepath">InputWithWhere.json</span>. The JSON message data additionally contains a <span class="parmname">where</span> filter parameter, which is a Salesforce Object Query Language (SOQL) expression. This is also set in the LocalEnvironment, and further limits the returned records to those Accounts created since 1st January 2015. Change the value if you want to use an alternative SOQL expression. </p>
+								
+							
+								<p> If the Flow Exerciser failed to deploy the projects, or the flow failed to retrieve the records from the Salesforce system, follow the <span class="uicontrol">Resolving problems when you use Salesforce nodes</span> link in the <span class="uicontrol">Find out more</span> section to diagnose the problem. </p>
+								
+							
+						</div>
+						
+						<div class="row content-details"> 	
+							<h4>Find out more</h4>
+							<ul>
+							
+								
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/rt26110_.htm')" title="Knowledge Center link to  Testing your message flow by using the Flow exerciser">Testing your message flow by using the Flow exerciser</a> </li>
+									
+							
+								
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bz90710_.htm')" title="Knowledge Center link to  Resolving problems when you use Salesforce nodes">Resolving problems when you use Salesforce nodes</a> </li>
+									
+							
+								
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bz90600_.htm')" title="Knowledge Center link to  Working with Salesforce">Working with Salesforce</a> </li>
+									
+							
+							</ul>
+						</div>
+							
+					</div>
+					
+				</div>	
+			</div> <!-- tab-content -->
+		</div> <!-- columns -->
+	  </div> <!-- row --></body>
+		<script src="https://ot4i.github.io/iib-tutorials/js/vendor/jquery.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/vendor/foundation.min.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/main.js"></script>
+	</body>
+<!-- body::End -->
+
+</html>
