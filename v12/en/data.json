@@ -84,7 +84,7 @@
                         "section": "The SalesforceRequest node uses the Force.com REST API to exchange data with Salesforce, and so the input and output message trees for the SalesforceRequest node are in the JSON domain."
                     },
                     {
-                        "section": "Each Salesforce object is described by a JSON schema, which may be used as the input or output schema for a Mapping node. The JSON schema for Salesforce objects are provided in the server/sample/Salesforce folder of your IBM Integration Bus installation, and must be copied into a shared library or REST API project. The map using the JSON schema must reside in the same container as the schema."
+                        "section": "Each Salesforce object is described by a JSON schema, which may be used as the input or output schema for a Mapping node. The JSON schema for Salesforce objects are provided in the server/sample/Salesforce folder of your IBM App Connect Enterprise installation, and must be copied into a shared library or REST API project. The map using the JSON schema must reside in the same container as the schema."
                     },
                     {
                         "section": "You will import an application and a shared library into your Toolkit workspace, configure the connection to the Salesforce system, and invoke the message flow using the Flow Exerciser."
