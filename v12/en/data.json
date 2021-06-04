@@ -40,8 +40,8 @@
             "resourceToOpen": "MainFlow",
             "helpLink": 
 			{
-                "text": "IBM Knowledge Center",
-           		"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.ace.home.doc/help_home.htm"
+                "text": "IBM Documentation",
+           		"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/acesw_home.html"
             }
         },
         "pageDetails": 
@@ -98,9 +98,9 @@
 				"details": 
 				[
 					{
-						"title": "Knowledge Center link to ",
+						"title": "IBM Documentation link to ",
 						"description": "Working with Salesforce",
-						"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bz90600_.htm",
+						"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/bz90600_.htm",
 						"type": "web"
 					}
 				]
@@ -131,9 +131,9 @@
                     "details": 
 		    		[
                         {
-                            "title": "Knowledge Center link to ",
+                            "title": "IBM Documentation link to ",
 			    			"description": "Working with Salesforce",
-			    			"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bz90600_.htm",
+			    			"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/bz90600_.htm",
 							"type": "weB"
                         }
                     ]
@@ -185,21 +185,21 @@
                     "details": 
 		    [
                         {
-                            "title": "Knowledge Center link to ",
+                            "title": "IBM Documentation link to ",
                             "description": "Configuring a secure connection to Salesforce.com",
-                            "link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bz90640_.htm",
+                            "link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/bz90640_.htm",
 							"type": "web"
                         },
                         {
-                            "title": "Knowledge Center link to ",
+                            "title": "IBM Documentation link to ",
 						    "description": "Working with Salesforce",
-						    "link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bz90600_.htm",
+						    "link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/bz90600_.htm",
 							"type": "web"
                         },
                         {
-                            "title": "Knowledge Center link to ",
+                            "title": "IBM Documentation link to ",
                             "description": "Creating or transforming a JSON output message by using a JSON schema",
-                            "link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/sm12036_.htm",
+                            "link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/sm12036_.htm",
 							"type": "web"
                         }
                     ]
@@ -275,21 +275,21 @@
                     "details": 
 		    [
                         {
-                            "title": "Knowledge Center link to ",
+                            "title": "IBM Documentation link to ",
                             "description": "Testing your message flow by using the Flow exerciser",
-                            "link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/rt26110_.htm",
+                            "link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/rt26110_.htm",
 							"type": "web"
                         },
                         {
-                            "title": "Knowledge Center link to ",
+                            "title": "IBM Documentation link to ",
                             "description": "Resolving problems when you use Salesforce nodes",
-                            "link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bz90710_.htm",
+                            "link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/bz90710_.htm",
 							"type": "web"
                         },
                         {
-                            "title": "Knowledge Center link to ",
+                            "title": "IBM Documentation link to ",
 			    			"description": "Working with Salesforce",
-			    			"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bz90600_.htm",
+			    			"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/bz90600_.htm",
 							"type": "web"
                         }
                     ]
