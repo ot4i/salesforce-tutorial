@@ -78,7 +78,7 @@
                         "section": "This tutorial demonstrates a simple message flow which retrieves existing Account records from a Salesforce system using the SalesforceRequest node. The flow exposes a HTTP service which accepts some filter properties to limit the number of Account records returned. The records are returned as an array of JSON objects."
                     },
                     {
-                        "section": "The SalesforceRequest node in IBM App Connect Enterprise allows message flows to be developed that can Create, Retrieve, Update and Delete records for the different objects that exist in a Salesforce system, such as Account, Contact and Lead. Records may be retrieved by Salesforce ID, by custom external ID, or by SOQL WHERE clause. Records may be updated by Salesforce ID or by custom external ID. Records may be deleted by Salesforce ID."
+                        "section": "The SalesforceRequest node in IBM App Connect Enterprise allows message flows to be developed that can Create, Retrieve, Update and Delete records for the different objects that exist in a Salesforce system, such as Account, Contact and Lead. Records may be retrieved by Salesforce ID, by custom external ID, or by using a Salesforce Object Query Language (SOQL) WHERE clause. Records may be updated by Salesforce ID or by custom external ID. Records may be deleted by Salesforce ID."
                     },
                     {
                         "section": "The SalesforceRequest node uses the Force.com REST API to exchange data with Salesforce, and so the input and output message trees for the SalesforceRequest node are in the JSON domain."
